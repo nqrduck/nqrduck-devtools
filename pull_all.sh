@@ -16,6 +16,10 @@ REPOS=(
     "nqrduckumentation"
 )
 
+# Pull the current repository
+echo "Pulling changes in nqrduck-devtools..."
+git pull
+
 cd ..
 
 # Iterate through the repositories and run git pull on each one
