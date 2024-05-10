@@ -37,6 +37,11 @@ for repo in "${OTHER_REPOS[@]}"; do
     git clone "$repo"
 done
 
+# Install the nqrduckumentation requirements
+cd nqrduckumentation
+pip install -r requirements.txt
+cd ..
+
 # Limedriver bindings  need to be installed seperately
 git clone "https://github.com/nqrduck/LimeDriverBindings"
 cd LimeDriverBindings || { echo "Failed to enter LimeDriverBindings, skipping..."; continue; }
