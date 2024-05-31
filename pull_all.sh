@@ -14,6 +14,9 @@ REPOS=(
     "LimeDriverBindings"
     "LimeDriver"
     "nqrduckumentation"
+    "quackseq"
+    "quackseq-simulator"
+    "quackseq-limenqr"
 )
 
 # Pull the current repository

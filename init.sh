@@ -17,6 +17,9 @@ REPOS_py=(
     "https://github.com/nqrduck/nqrduck-autotm"
     "https://github.com/nqrduck/nqrduck-broadband"
     "https://github.com/nqrduck/nqrduck-pulseprogrammer"
+    "https://github.com/nqrduck/quackseq"
+    "https://github.com/nqrduck/quackseq-simulator"
+    "https://github.com/nqrduck/quackseq-limenqr"
 )
 
 # These are only cloned
