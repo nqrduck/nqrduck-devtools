@@ -8,25 +8,25 @@ source venv/bin/activate
 
 # This are installed in editable mode
 REPOS_py=(
-    "https://github.com/nqrduck/nqrduck"
-    "https://github.com/nqrduck/nqrduck-spectrometer"
-    "https://github.com/nqrduck/nqrduck-spectrometer-limenqr"
-    "https://github.com/nqrduck/nqrduck-spectrometer-simulator"
-    "https://github.com/nqrduck/nqr-blochsimulator"
-    "https://github.com/nqrduck/nqrduck-measurement"
-    "https://github.com/nqrduck/nqrduck-autotm"
-    "https://github.com/nqrduck/nqrduck-broadband"
-    "https://github.com/nqrduck/nqrduck-pulseprogrammer"
-    "https://github.com/nqrduck/quackseq"
-    "https://github.com/nqrduck/quackseq-simulator"
-    "https://github.com/nqrduck/quackseq-limenqr"
+    "https://git.private.coffee/nqrduck/nqrduck"
+    "https://git.private.coffee/nqrduck/nqrduck-spectrometer"
+    "https://git.private.coffee/nqrduck/nqrduck-spectrometer-limenqr"
+    "https://git.private.coffee/nqrduck/nqrduck-spectrometer-simulator"
+    "https://git.private.coffee/nqrduck/nqr-blochsimulator"
+    "https://git.private.coffee/nqrduck/nqrduck-measurement"
+    "https://git.private.coffee/nqrduck/nqrduck-autotm"
+    "https://git.private.coffee/nqrduck/nqrduck-broadband"
+    "https://git.private.coffee/nqrduck/nqrduck-pulseprogrammer"
+    "https://git.private.coffee/nqrduck/quackseq"
+    "https://git.private.coffee/nqrduck/quackseq-simulator"
+    "https://git.private.coffee/nqrduck/quackseq-limenqr"
 )
 
 # These are only cloned
 OTHER_REPOS=(
-    "https://github.com/nqrduck/ATM"
-    "https://github.com/nqrduck/LimeDriver"
-    "https://github.com/nqrduck/nqrduckumentation"
+    "https://git.private.coffee/nqrduck/ATM"
+    "https://git.private.coffee/nqrduck/LimeDriver"
+    "https://git.private.coffeenqrduck/nqrduckumentation"
 )
 
 for repo in "${REPOS_py[@]}"; do
