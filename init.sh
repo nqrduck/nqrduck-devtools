@@ -6,7 +6,7 @@ cd ..
 python3 -m venv venv
 source venv/bin/activate
 
-# This are installed in editable mode
+# Theses are installed in editable mode
 REPOS_py=(
     "https://git.private.coffee/nqrduck/nqrduck"
     "https://git.private.coffee/nqrduck/nqrduck-spectrometer"
