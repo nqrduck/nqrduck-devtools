@@ -8,31 +8,32 @@ source venv/bin/activate
 
 # Theses are installed in editable mode
 REPOS_py=(
-    "https://git.private.coffee/nqrduck/nqrduck"
-    "https://git.private.coffee/nqrduck/nqrduck-spectrometer"
-    "https://git.private.coffee/nqrduck/nqrduck-spectrometer-limenqr"
-    "https://git.private.coffee/nqrduck/nqrduck-spectrometer-simulator"
-    "https://git.private.coffee/nqrduck/nqr-blochsimulator"
-    "https://git.private.coffee/nqrduck/nqrduck-measurement"
-    "https://git.private.coffee/nqrduck/nqrduck-autotm"
-    "https://git.private.coffee/nqrduck/nqrduck-broadband"
-    "https://git.private.coffee/nqrduck/nqrduck-pulseprogrammer"
-    "https://git.private.coffee/nqrduck/quackseq"
-    "https://git.private.coffee/nqrduck/quackseq-simulator"
-    "https://git.private.coffee/nqrduck/quackseq-limenqr"
+    "ssh://git@git.private.coffee/nqrduck/nqrduck.git"
+    "ssh://git@git.private.coffee/nqrduck/nqrduck-spectrometer"
+    "ssh://git@git.private.coffee/nqrduck/nqrduck-spectrometer-limenqr"
+    "ssh://git@git.private.coffee/nqrduck/nqrduck-spectrometer-simulator"
+    "ssh://git@git.private.coffee/nqrduck/nqr-blochsimulator"
+    "ssh://git@git.private.coffee/nqrduck/nqrduck-measurement"
+    "ssh://git@git.private.coffee/nqrduck/nqrduck-autotm"
+    "ssh://git@git.private.coffee/nqrduck/nqrduck-broadband"
+    "ssh://git@git.private.coffee/nqrduck/nqrduck-pulseprogrammer"
+    "ssh://git@git.private.coffee/nqrduck/quackseq"
+    "ssh://git@git.private.coffee/nqrduck/quackseq-simulator"
+    "ssh://git@git.private.coffee/nqrduck/quackseq-limenqr"
 )
 
 # These are only cloned
 OTHER_REPOS=(
-    "https://git.private.coffee/nqrduck/ATM"
-    "https://git.private.coffee/nqrduck/LimeDriver"
-    "https://git.private.coffeenqrduck/nqrduckumentation"
+    "ssh://git@git.private.coffee/nqrduck/ATM"
+    "ssh://git@git.private.coffee/nqrduck/LimeDriver"
+    "ssh://git@git.private.coffeenqrduck/nqrduckumentation"
 )
 
 for repo in "${REPOS_py[@]}"; do
     git clone "$repo"
     cd "$(basename "$repo")" || { echo "Failed to enter $(basename "$repo"), skipping..."; continue; }
     pip install -e .
+    git checkout development
     cd ..
 done
 
@@ -46,7 +47,7 @@ pip install -r requirements.txt
 cd ..
 
 # Limedriver bindings  need to be installed seperately
-git clone "https://github.com/nqrduck/LimeDriverBindings"
+git clone "ssh://git@git.private.coffee/nqrduck/LimeDriverBindings"
 cd LimeDriverBindings || { echo "Failed to enter LimeDriverBindings, skipping..."; continue; }
 git submodule init
 git submodule update
