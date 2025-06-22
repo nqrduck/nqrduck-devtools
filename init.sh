@@ -17,6 +17,8 @@ REPOS_py=(
     "ssh://git@git.private.coffee/nqrduck/nqrduck-autotm"
     "ssh://git@git.private.coffee/nqrduck/nqrduck-broadband"
     "ssh://git@git.private.coffee/nqrduck/nqrduck-pulseprogrammer"
+    "ssh://git@git.private.coffee/nqrduck/nqrduck-modules"
+    "ssh://git@git.private.coffee/nqrduck/nqrduck-module"
     "ssh://git@git.private.coffee/nqrduck/quackseq"
     "ssh://git@git.private.coffee/nqrduck/quackseq-simulator"
     "ssh://git@git.private.coffee/nqrduck/quackseq-limenqr"
