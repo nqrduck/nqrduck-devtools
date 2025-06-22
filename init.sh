@@ -26,6 +26,7 @@ REPOS_py=(
 OTHER_REPOS=(
     "ssh://git@git.private.coffee/nqrduck/ATM"
     "ssh://git@git.private.coffee/nqrduck/LimeDriver"
+    "ssh://git@git.private.coffee/nqrduck/LimeDriverBindings"
     "ssh://git@git.private.coffeenqrduck/nqrduckumentation"
 )
 
