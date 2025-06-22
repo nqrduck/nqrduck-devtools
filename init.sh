@@ -17,7 +17,6 @@ REPOS_py=(
     "ssh://git@git.private.coffee/nqrduck/nqrduck-autotm"
     "ssh://git@git.private.coffee/nqrduck/nqrduck-broadband"
     "ssh://git@git.private.coffee/nqrduck/nqrduck-pulseprogrammer"
-    "ssh://git@git.private.coffee/nqrduck/nqrduck-modules"
     "ssh://git@git.private.coffee/nqrduck/nqrduck-module"
     "ssh://git@git.private.coffee/nqrduck/quackseq"
     "ssh://git@git.private.coffee/nqrduck/quackseq-simulator"
@@ -29,7 +28,8 @@ OTHER_REPOS=(
     "ssh://git@git.private.coffee/nqrduck/ATM"
     "ssh://git@git.private.coffee/nqrduck/LimeDriver"
     "ssh://git@git.private.coffee/nqrduck/LimeDriverBindings"
-    "ssh://git@git.private.coffeenqrduck/nqrduckumentation"
+    "ssh://git@git.private.coffee/nqrduck/NQRduckumentation.git"
+    "ssh://git@git.private.coffee/nqrduck/nqrduck-modules"
 )
 
 for repo in "${REPOS_py[@]}"; do
@@ -44,14 +44,12 @@ for repo in "${OTHER_REPOS[@]}"; do
     git clone "$repo"
 done
 
-# Install the nqrduckumentation requirements
-cd nqrduckumentation
-pip install -r requirements.txt
-cd ..
+# Install the NQRduckumentation requirements 
+cd NQRduckumentation && pip install -r requirements.txt && cd ..
 
 # Limedriver bindings  need to be installed seperately
 git clone "ssh://git@git.private.coffee/nqrduck/LimeDriverBindings"
-cd LimeDriverBindings || { echo "Failed to enter LimeDriverBindings, skipping..."; continue; }
+cd LimeDriverBindings || { echo "Failed to enter LimeDriverBindings, skipping...";}
 git submodule init
 git submodule update
 pip install -e .
